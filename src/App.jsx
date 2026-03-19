@@ -286,24 +286,32 @@ const OverviewTab = ({ globalTotalGP, sortedTeams, setDetailedTeam, recentLoot, 
         position: 'relative',
         overflow: 'hidden'
       }}>
-        <div style={{ position: 'relative', zIndex: 2 }}>
-          <div style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'var(--text-secondary)', marginBottom: '1rem', fontWeight: 700 }}>
-            EVENT TOTAL WEALTH
+        <div style={{ position: 'relative', zIndex: 2, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem' }}>
+          <div>
+            <div style={{ fontSize: '0.9rem', textTransform: 'uppercase', letterSpacing: '0.2em', color: 'var(--text-secondary)', marginBottom: '1rem', fontWeight: 700 }}>
+              EVENT TOTAL WEALTH
+            </div>
+            <motion.h1
+              style={{
+                fontSize: '5rem',
+                fontWeight: 900,
+                color: '#fff',
+                lineHeight: 1,
+                marginBottom: '1rem',
+                fontFamily: "'JetBrains Mono', monospace"
+              }}
+            >
+              <AnimatedCounter value={globalTotalGP} />
+            </motion.h1>
+            <div style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>
+              {sortedTeams.length} teams · {allPlayers.length} players · {data.reduce((acc, team) => acc + team.players.reduce((pAcc, p) => pAcc + p.items_obtained.length, 0), 0)} drops
+            </div>
           </div>
-          <motion.h1
-            style={{
-              fontSize: '5rem',
-              fontWeight: 900,
-              color: '#fff',
-              lineHeight: 1,
-              marginBottom: '1rem',
-              fontFamily: "'JetBrains Mono', monospace"
-            }}
-          >
-            <AnimatedCounter value={globalTotalGP} />
-          </motion.h1>
-          <div style={{ fontSize: '1.1rem', color: 'var(--text-secondary)' }}>
-            {sortedTeams.length} teams · {allPlayers.length} players · {data.reduce((acc, team) => acc + team.players.reduce((pAcc, p) => pAcc + p.items_obtained.length, 0), 0)} drops
+          
+          <div style={{ textAlign: 'right' }}>
+            <h2 style={{ fontSize: '3.5rem', fontWeight: 900, color: 'rgba(255,255,255,0.95)', textShadow: '0 4px 20px rgba(168,85,247,0.6)', margin: 0, lineHeight: 1.1, fontStyle: 'italic' }}>
+              NEVR LUCKY<br/>BINGO V3
+            </h2>
           </div>
         </div>
         <div style={{
@@ -317,7 +325,7 @@ const OverviewTab = ({ globalTotalGP, sortedTeams, setDetailedTeam, recentLoot, 
         }}></div>
       </div>
 
-      {/* ===== TEAM WEALTH VISUALIZATION ===== */}
+      {/* ===== TEAM WEALTH VISUALIZATION (VERTICAL BAR CHART) ===== */}
       <div style={{ marginBottom: '4rem' }}>
         <h2 style={{
           fontSize: '1.4rem',
@@ -329,9 +337,10 @@ const OverviewTab = ({ globalTotalGP, sortedTeams, setDetailedTeam, recentLoot, 
         }}>
           ⚔️ TEAM WEALTH COMPARISON
         </h2>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+        <div style={{ display: 'flex', height: '400px', alignItems: 'flex-end', gap: '1.5rem', marginTop: '2rem', padding: '2rem', background: 'rgba(255,255,255,0.02)', borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.05)' }}>
           {sortedTeams.map((team, idx) => {
-            const percentage = (team.totalGP / globalTotalGP) * 100;
+            const percentageGlobal = (team.totalGP / globalTotalGP) * 100;
+            const heightVisual = (team.totalGP / maxTeamGP) * 100;
             const colorClass = getTeamColorClass(team.team_name);
             const teamColors = {
               astral: '#a855f7',
@@ -346,63 +355,52 @@ const OverviewTab = ({ globalTotalGP, sortedTeams, setDetailedTeam, recentLoot, 
             return (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ height: '100%', opacity: 1 }}
                 transition={{ delay: idx * 0.1 }}
                 onClick={() => setDetailedTeam(team)}
-                style={{ cursor: 'pointer' }}
+                style={{ cursor: 'pointer', flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', height: '100%', justifyContent: 'flex-end' }}
               >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
-                  <div style={{
-                    fontSize: '1.1rem',
-                    fontWeight: 700,
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '0.75rem'
-                  }}>
-                    <span style={{ fontSize: '1.5rem', opacity: 0.7 }}>#{idx + 1}</span>
-                    <TeamLogo teamName={team.team_name} size={32} />
-                    <span className={`neon-text-${colorClass}`}>{team.team_name}</span>
-                  </div>
-                  <div className="font-mono" style={{ fontSize: '1.1rem', fontWeight: 700, color: barColor }}>
-                    {formatGP(team.totalGP)}
-                  </div>
+                {/* GP Label Above Bar */}
+                <div className="font-mono" style={{ fontSize: '1.1rem', fontWeight: 800, color: barColor, marginBottom: '0.75rem', textAlign: 'center' }}>
+                  {formatGP(team.totalGP)}
                 </div>
 
-                {/* BAR CHART */}
+                {/* Vertical Bar */}
                 <div style={{
                   width: '100%',
-                  height: '48px',
-                  background: 'rgba(255,255,255,0.02)',
-                  borderRadius: '12px',
+                  height: '100%',
+                  background: 'rgba(255,255,255,0.03)',
+                  borderRadius: '12px 12px 0 0',
+                  position: 'relative',
+                  display: 'flex',
+                  alignItems: 'flex-end',
                   overflow: 'hidden',
-                  border: `1px solid rgba(255,255,255,0.05)`
+                  border: '1px solid rgba(255,255,255,0.05)'
                 }}>
                   <motion.div
-                    initial={{ width: 0 }}
-                    animate={{ width: `${percentage}%` }}
+                    initial={{ height: 0 }}
+                    animate={{ height: `${heightVisual}%` }}
                     transition={{ duration: 1.5, ease: 'easeOut', delay: idx * 0.1 }}
                     style={{
-                      height: '100%',
-                      background: `linear-gradient(90deg, ${barColor}40, ${barColor}80)`,
-                      borderRadius: '12px',
-                      position: 'relative',
-                      boxShadow: `0 0 20px ${barColor}40`
+                      width: '100%',
+                      background: `linear-gradient(0deg, ${barColor}30, ${barColor}90)`,
+                      boxShadow: `0 0 20px ${barColor}50`,
+                      borderRadius: '12px 12px 0 0',
+                      position: 'relative'
                     }}
                   >
-                    <div style={{
-                      position: 'absolute',
-                      right: '1rem',
-                      top: '50%',
-                      transform: 'translateY(-50%)',
-                      color: '#fff',
-                      fontWeight: 700,
-                      fontSize: '0.9rem',
-                      fontFamily: "'JetBrains Mono'"
-                    }}>
-                      {percentage.toFixed(0)}%
+                    <div style={{ position: 'absolute', width: '100%', textAlign: 'center', top: '1rem', color: '#fff', fontWeight: 800, textShadow: '0 2px 4px rgba(0,0,0,0.8)' }}>
+                      {percentageGlobal.toFixed(1)}%
                     </div>
                   </motion.div>
+                </div>
+
+                {/* Team Info Below Bar */}
+                <div style={{ marginTop: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '0.5rem' }}>
+                  <TeamLogo teamName={team.team_name} size={48} />
+                  <div className={`neon-text-${colorClass}`} style={{ fontWeight: 800, textAlign: 'center', fontSize: '1.1rem' }}>{team.team_name}</div>
+                  <div style={{color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem'}}>#{idx+1}</div>
                 </div>
               </motion.div>
             );
@@ -693,16 +691,16 @@ const TeamDetailView = ({ team, onBack, setDetailedPlayer }) => {
 
 
       <h2 className="detail-section-title">Player Roster</h2>
-      <div className="roster-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
+      <div className="roster-grid-large">
         {[...team.players].sort((a,b) => b.total_loot_value_gp - a.total_loot_value_gp).map(p => (
-          <div key={p.name} className="glass roster-card" style={{ padding: '1.5rem', alignItems: 'center' }} onClick={() => setDetailedPlayer({...p, teamName: team.team_name})}>
-            <div>
-              <div className="roster-name" style={{ fontSize: '1.4rem', fontWeight: 800 }}>{p.name}</div>
-              <div className="roster-drops" style={{ fontSize: '1rem', color: '#a1a1aa' }}>{p.items_obtained.length} items logged</div>
+          <div key={p.name} className="glass roster-card" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }} onClick={() => setDetailedPlayer({...p, teamName: team.team_name})}>
+            <div style={{ marginBottom: '1rem' }}>
+              <div className="roster-name" style={{ fontSize: '1.6rem', fontWeight: 900, marginBottom: '0.5rem' }}>{p.name}</div>
+              <div className="roster-drops" style={{ fontSize: '1.2rem', color: '#a1a1aa' }}>{p.items_obtained.length} items logged</div>
             </div>
-            <div style={{ textAlign: 'right' }}>
-              <div className="font-mono roster-gp" style={{ fontSize: '1.4rem' }}>{formatGP(p.total_loot_value_gp)}</div>
-              <div className="roster-gp-lbl" style={{ opacity: 0.6, fontSize: '0.9rem' }}>GP</div>
+            <div>
+              <div className="font-mono roster-gp" style={{ fontSize: '1.8rem', fontWeight: 800, color: '#fff' }}>{formatGP(p.total_loot_value_gp)}</div>
+              <div className="roster-gp-lbl" style={{ opacity: 0.6, fontSize: '1rem', marginTop: '0.2rem' }}>GP</div>
             </div>
           </div>
         ))}
