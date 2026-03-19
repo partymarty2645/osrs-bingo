@@ -14,27 +14,52 @@ const VESTIGE_OVERRIDES = {
   "venator vestige": 46900000
 };
 
+// Map of alias -> canonical name. Any player whose name (lowercased, trimmed) matches
+// an alias key will be renamed and merged into a single entry.
+const PLAYER_ALIASES = {
+  "l loi":  "l-loi",
+  "lloi":   "l-loi",
+  "l-loi":  "l-loi",
+};
+
 const processedTeamsData = allTeamsData.map(team => {
-  const processedPlayers = team.players.map(player => {
+  // Step 1: Apply vestige overrides + rename aliases
+  const renamedPlayers = team.players.map(player => {
+    const canonicalName = PLAYER_ALIASES[player.name.toLowerCase().trim()] || player.name;
     let newTotalGP = 0;
     const processedItems = player.items_obtained.map(item => {
       const baseName = item.name.replace(/^[0-9,]+\s*x\s*/, '').trim().replace(/\\-/g, '-').toLowerCase();
       let finalValue = item.value_gp;
-      
       if (VESTIGE_OVERRIDES[baseName] !== undefined) {
         let qt = 1;
         const qtMatch = item.name.match(/^([0-9,]+)\s*x/);
         if (qtMatch) qt = parseInt(qtMatch[1].replace(/,/g, ''), 10);
         finalValue = VESTIGE_OVERRIDES[baseName] * qt;
       }
-      
       newTotalGP += finalValue;
       return { ...item, value_gp: finalValue };
     });
-    return { ...player, items_obtained: processedItems, total_loot_value_gp: newTotalGP };
+    return { ...player, name: canonicalName, items_obtained: processedItems, total_loot_value_gp: newTotalGP };
   });
-  return { ...team, players: processedPlayers };
+
+  // Step 2: Merge players that share the same canonical name
+  const mergedMap = {};
+  renamedPlayers.forEach(player => {
+    if (mergedMap[player.name]) {
+      const existing = mergedMap[player.name];
+      mergedMap[player.name] = {
+        ...existing,
+        items_obtained: [...existing.items_obtained, ...player.items_obtained],
+        total_loot_value_gp: existing.total_loot_value_gp + player.total_loot_value_gp,
+      };
+    } else {
+      mergedMap[player.name] = { ...player };
+    }
+  });
+
+  return { ...team, players: Object.values(mergedMap) };
 });
+
 
 const formatGP = (value) => {
   if (value >= 1000000000) return (value / 1000000000).toFixed(2) + 'B';

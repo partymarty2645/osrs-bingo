@@ -3990,7 +3990,116 @@
       {
         "name": "lloi",
         "total_loot_value_gp": 92657424,
-        "items_obtained": []
+        "items_obtained": [
+          {
+            "name": "74 x Sun-kissed bones",
+            "value_gp": 592000,
+            "date": "2026-03-11",
+            "timestamp": "2026-03-11T22:36:00"
+          },
+          {
+            "name": "105 x Battlestaff",
+            "value_gp": 830025,
+            "date": "2026-03-09",
+            "timestamp": "2026-03-09T21:15:00"
+          },
+          {
+            "name": "70 x Battlestaff",
+            "value_gp": 553350,
+            "date": "2026-03-09",
+            "timestamp": "2026-03-09T20:32:00"
+          },
+          {
+            "name": "Osmumten's fang",
+            "value_gp": 24261755,
+            "date": "2026-03-09",
+            "timestamp": "2026-03-09T19:05:00"
+          },
+          {
+            "name": "Lightbearer",
+            "value_gp": 5689476,
+            "date": "2026-03-08",
+            "timestamp": "2026-03-08T23:47:00"
+          },
+          {
+            "name": "Masori chaps",
+            "value_gp": 36574466,
+            "date": "2026-03-08",
+            "timestamp": "2026-03-08T23:00:00"
+          },
+          {
+            "name": "70 x Battlestaff",
+            "value_gp": 553560,
+            "date": "2026-03-08",
+            "timestamp": "2026-03-08T15:23:00"
+          },
+          {
+            "name": "70 x Battlestaff",
+            "value_gp": 553490,
+            "date": "2026-03-08",
+            "timestamp": "2026-03-08T00:15:00"
+          },
+          {
+            "name": "70 x Battlestaff",
+            "value_gp": 553490,
+            "date": "2026-03-07",
+            "timestamp": "2026-03-07T17:12:00"
+          },
+          {
+            "name": "Virtus mask",
+            "value_gp": 8627841,
+            "date": "2026-03-06",
+            "timestamp": "2026-03-06T20:36:00"
+          },
+          {
+            "name": "7 x Dragon plateskirt",
+            "value_gp": 1127224,
+            "date": "2026-03-06",
+            "timestamp": "2026-03-06T19:28:00"
+          },
+          {
+            "name": "7 x Dragon plateskirt",
+            "value_gp": 1127224,
+            "date": "2026-03-06",
+            "timestamp": "2026-03-06T18:06:00"
+          },
+          {
+            "name": "Soulflame horn",
+            "value_gp": 3839842,
+            "date": "2026-03-03",
+            "timestamp": "2026-03-03T00:06:00"
+          },
+          {
+            "name": "5 x Oathplate shards",
+            "value_gp": 1134730,
+            "date": "2026-03-02",
+            "timestamp": "2026-03-02T23:57:00"
+          },
+          {
+            "name": "7 x Oathplate shards",
+            "value_gp": 1581503,
+            "date": "2026-03-02",
+            "timestamp": "2026-03-02T00:01:00"
+          },
+          {
+            "name": "6 x Oathplate shards",
+            "value_gp": 1355574,
+            "date": "2026-03-01",
+            "timestamp": "2026-03-01T23:49:00"
+          },
+          {
+            "name": "Bludgeon spine",
+            "value_gp": 1850937,
+            "date": "2026-03-01",
+            "timestamp": "2026-03-01T15:09:00"
+          },
+          {
+            "name": "Bludgeon claw",
+            "value_gp": 1850937,
+            "date": "2026-03-01",
+            "timestamp": "2026-03-01T14:34:00"
+          }
+        ]
       },
       {
         "name": "alprosia",
