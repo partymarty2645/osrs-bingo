@@ -94,11 +94,12 @@ export function OsrsIcon({ iconKey, itemName, size = 24, className = '', style =
   }
 
   // Determine URLs
+  const baseUrl = import.meta.env.BASE_URL;
   let localImageUrl = '';
   if (isDynamic) {
-    localImageUrl = `/assets/icons/${formatItemName(itemName)}.png`;
+    localImageUrl = `${baseUrl}assets/icons/${formatItemName(itemName)}.png`;
   } else {
-    localImageUrl = `/assets/icons/${iconKey}.png`;
+    localImageUrl = `${baseUrl}assets/icons/${iconKey}.png`;
   }
   
   const wikiImageUrl = `https://oldschool.runescape.wiki/images/${config.wikiPath}.png`;
