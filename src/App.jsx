@@ -657,41 +657,52 @@ const TeamDetailView = ({ team, onBack, setDetailedPlayer }) => {
     <motion.div variants={detailVariants} initial="initial" animate="animate" exit="exit" className="detail-view">
       <button className="back-btn" onClick={onBack}><ChevronLeft size={20}/> Back to Dashboard</button>
       
-      <div className="detail-hero" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', paddingBottom: '2.5rem' }}>
-        <TeamLogo teamName={team.team_name} size={180} style={{ filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.6))' }} />
-        <h1 className={`view-title neon-text-${colorClass}`} style={{ margin: 0, fontSize: '3rem', textAlign: 'center' }}>
-          {team.team_name}
-        </h1>
-      </div>
-      
-      <div className="detail-hero">
-        <div className="detail-pills" style={{ justifyContent: 'center' }}>
-          <div className="stat-pill-lg">
-            <span className="lbl">Total Contribution</span>
-            <span className="val font-mono text-gradient">{formatGP(totalGP)} GP</span>
+      <div className="team-hero-grid" style={{ display: 'grid', gridTemplateColumns: 'minmax(250px, 360px) 1fr', gap: '2rem', marginBottom: '3rem' }}>
+        
+        {/* Left Side: Giant Logo Box (Red in Mockup) */}
+        <div className="glass" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '2rem', background: 'rgba(255,255,255,0.02)', borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.05)' }}>
+          <TeamLogo teamName={team.team_name} size={300} style={{ filter: 'drop-shadow(0 8px 30px rgba(0,0,0,0.8))' }} />
+        </div>
+
+        {/* Right Side: Name & Stats (Orange and Yellow in Mockup) */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', justifyContent: 'space-between' }}>
+          
+          <div className="glass" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '2.5rem', borderRadius: '1rem', background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.05)' }}>
+            <h1 className={`view-title neon-text-${colorClass}`} style={{ margin: 0, fontSize: '4.5rem', letterSpacing: '2px' }}>
+              {team.team_name}
+            </h1>
           </div>
-          <div className="stat-pill-lg">
-            <span className="lbl">Total Drops</span>
-            <span className="val">{dropCount}</span>
+          
+          <div className="glass" style={{ display: 'flex', gap: '2rem', justifyContent: 'space-around', alignItems: 'center', padding: '2rem', borderRadius: '1rem', border: '1px solid rgba(255,255,255,0.05)', flex: 1 }}>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '1rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.5rem' }}>Total Contribution</div>
+              <div className="font-mono text-gradient" style={{ fontSize: '2.5rem', fontWeight: 800 }}>{formatGP(totalGP)} <span style={{fontSize: '1.2rem'}}>GP</span></div>
+            </div>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '1rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.5rem' }}>Total Drops</div>
+              <div style={{ fontSize: '2.5rem', fontWeight: 800 }}>{dropCount}</div>
+            </div>
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: '1rem', color: '#94a3b8', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.5rem' }}>Active Members</div>
+              <div style={{ fontSize: '2.5rem', fontWeight: 800 }}>{team.players.length}</div>
+            </div>
           </div>
-          <div className="stat-pill-lg">
-            <span className="lbl">Active Members</span>
-            <span className="val">{team.players.length}</span>
-          </div>
+          
         </div>
       </div>
 
+
       <h2 className="detail-section-title">Player Roster</h2>
-      <div className="roster-grid">
+      <div className="roster-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '1.5rem' }}>
         {[...team.players].sort((a,b) => b.total_loot_value_gp - a.total_loot_value_gp).map(p => (
-          <div key={p.name} className="glass roster-card" onClick={() => setDetailedPlayer({...p, teamName: team.team_name})}>
+          <div key={p.name} className="glass roster-card" style={{ padding: '1.5rem', alignItems: 'center' }} onClick={() => setDetailedPlayer({...p, teamName: team.team_name})}>
             <div>
-              <div className="roster-name">{p.name}</div>
-              <div className="roster-drops">{p.items_obtained.length} items logged</div>
+              <div className="roster-name" style={{ fontSize: '1.4rem', fontWeight: 800 }}>{p.name}</div>
+              <div className="roster-drops" style={{ fontSize: '1rem', color: '#a1a1aa' }}>{p.items_obtained.length} items logged</div>
             </div>
-            <div>
-              <div className="font-mono roster-gp">{formatGP(p.total_loot_value_gp)}</div>
-              <div className="roster-gp-lbl">GP</div>
+            <div style={{ textAlign: 'right' }}>
+              <div className="font-mono roster-gp" style={{ fontSize: '1.4rem' }}>{formatGP(p.total_loot_value_gp)}</div>
+              <div className="roster-gp-lbl" style={{ opacity: 0.6, fontSize: '0.9rem' }}>GP</div>
             </div>
           </div>
         ))}
