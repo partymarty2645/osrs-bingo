@@ -18,6 +18,17 @@ const getTeamColorClass = (teamName) => {
   return teamName ? teamName.split(' ')[1].toLowerCase() : 'astral';
 };
 
+const TeamLogo = ({ teamName, size = 32, style = {} }) => {
+  const colorClass = getTeamColorClass(teamName);
+  return (
+    <img 
+      src={`${import.meta.env.BASE_URL}assets/teams/${colorClass}.png`} 
+      style={{ width: size, height: size, objectFit: 'contain', filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))', ...style }} 
+      alt={teamName} 
+    />
+  );
+};
+
 const getDropClass = (val) => {
   if (val >= 100000000) return 'drop-insane';
   if (val >= 10000000) return 'drop-mega';
@@ -320,7 +331,7 @@ const OverviewTab = ({ globalTotalGP, sortedTeams, setDetailedTeam, recentLoot, 
         </h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
           {sortedTeams.map((team, idx) => {
-            const percentage = (team.totalGP / maxTeamGP) * 100;
+            const percentage = (team.totalGP / globalTotalGP) * 100;
             const colorClass = getTeamColorClass(team.team_name);
             const teamColors = {
               astral: '#a855f7',
@@ -349,7 +360,8 @@ const OverviewTab = ({ globalTotalGP, sortedTeams, setDetailedTeam, recentLoot, 
                     alignItems: 'center',
                     gap: '0.75rem'
                   }}>
-                    <span style={{ fontSize: '1.5rem' }}>#{idx + 1}</span>
+                    <span style={{ fontSize: '1.5rem', opacity: 0.7 }}>#{idx + 1}</span>
+                    <TeamLogo teamName={team.team_name} size={32} />
                     <span className={`neon-text-${colorClass}`}>{team.team_name}</span>
                   </div>
                   <div className="font-mono" style={{ fontSize: '1.1rem', fontWeight: 700, color: barColor }}>
@@ -547,7 +559,10 @@ const LeaderboardTab = ({ sortedTeams, setDetailedTeam, setDetailedPlayer }) => 
               style={{borderWidth: '1px', borderStyle: 'solid'}}
             >
               <div className="team-card-header">
-                <h3 className={`neon-text-${colorClass}`}>{team.team_name}</h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                  <TeamLogo teamName={team.team_name} size={36} />
+                  <h3 className={`neon-text-${colorClass}`}>{team.team_name}</h3>
+                </div>
                 <span className="team-card-rank">#{index + 1}</span>
               </div>
               <div className="team-gp font-mono">{formatGP(team.totalGP)} <span className="team-gp-lbl">GP</span></div>
@@ -643,7 +658,10 @@ const TeamDetailView = ({ team, onBack, setDetailedPlayer }) => {
       <button className="back-btn" onClick={onBack}><ChevronLeft size={20}/> Back to Dashboard</button>
       
       <div className="detail-hero">
-        <h1 className={`view-title neon-text-${colorClass}`}>{team.team_name}</h1>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+          <TeamLogo teamName={team.team_name} size={64} />
+          <h1 className={`view-title neon-text-${colorClass}`} style={{ margin: 0 }}>{team.team_name}</h1>
+        </div>
         <div className="detail-pills">
           <div className="stat-pill-lg">
             <span className="lbl">Total Contribution</span>
@@ -687,7 +705,10 @@ const PlayerDetailView = ({ player, onBack }) => {
       <button className="back-btn" onClick={onBack}><ChevronLeft size={20}/> Back</button>
       
       <div className="detail-hero">
-        <div className={`player-team-lbl neon-text-${colorClass}`}>{player.teamName}</div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
+          <TeamLogo teamName={player.teamName} size={24} />
+          <div className={`player-team-lbl neon-text-${colorClass}`} style={{ margin: 0 }}>{player.teamName}</div>
+        </div>
         <h1 className="view-title player-title"><User size={40}/> {player.name}</h1>
         <div className="detail-pills">
           <div className="stat-pill-lg stat-pill-green">
