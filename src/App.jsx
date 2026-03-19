@@ -7,6 +7,35 @@ import OsrsIcon from './components/OsrsIcon';
 import './App.css';
 import allTeamsData from '../all_teams.json';
 
+const VESTIGE_OVERRIDES = {
+  "ultor vestige": 27000000,
+  "bellator vestige": 29000000,
+  "magus vestige": 30500000,
+  "venator vestige": 46900000
+};
+
+const processedTeamsData = allTeamsData.map(team => {
+  const processedPlayers = team.players.map(player => {
+    let newTotalGP = 0;
+    const processedItems = player.items_obtained.map(item => {
+      const baseName = item.name.replace(/^[0-9,]+\s*x\s*/, '').trim().replace(/\\-/g, '-').toLowerCase();
+      let finalValue = item.value_gp;
+      
+      if (VESTIGE_OVERRIDES[baseName] !== undefined) {
+        let qt = 1;
+        const qtMatch = item.name.match(/^([0-9,]+)\s*x/);
+        if (qtMatch) qt = parseInt(qtMatch[1].replace(/,/g, ''), 10);
+        finalValue = VESTIGE_OVERRIDES[baseName] * qt;
+      }
+      
+      newTotalGP += finalValue;
+      return { ...item, value_gp: finalValue };
+    });
+    return { ...player, items_obtained: processedItems, total_loot_value_gp: newTotalGP };
+  });
+  return { ...team, players: processedPlayers };
+});
+
 const formatGP = (value) => {
   if (value >= 1000000000) return (value / 1000000000).toFixed(2) + 'B';
   if (value >= 1000000) return (value / 1000000).toFixed(1) + 'M';
@@ -768,7 +797,7 @@ const PlayerDetailView = ({ player, onBack }) => {
 };
 
 function App() {
-  const [data] = useState(allTeamsData);
+  const [data] = useState(processedTeamsData);
   const [activeTab, setActiveTab] = useState('overview');
   const [detailedTeam, setDetailedTeam] = useState(null);
   const [detailedPlayer, setDetailedPlayer] = useState(null);
