@@ -657,12 +657,15 @@ const TeamDetailView = ({ team, onBack, setDetailedPlayer }) => {
     <motion.div variants={detailVariants} initial="initial" animate="animate" exit="exit" className="detail-view">
       <button className="back-btn" onClick={onBack}><ChevronLeft size={20}/> Back to Dashboard</button>
       
+      <div className="detail-hero" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem', paddingBottom: '2.5rem' }}>
+        <TeamLogo teamName={team.team_name} size={180} style={{ filter: 'drop-shadow(0 4px 12px rgba(0,0,0,0.6))' }} />
+        <h1 className={`view-title neon-text-${colorClass}`} style={{ margin: 0, fontSize: '3rem', textAlign: 'center' }}>
+          {team.team_name}
+        </h1>
+      </div>
+      
       <div className="detail-hero">
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
-          <TeamLogo teamName={team.team_name} size={64} />
-          <h1 className={`view-title neon-text-${colorClass}`} style={{ margin: 0 }}>{team.team_name}</h1>
-        </div>
-        <div className="detail-pills">
+        <div className="detail-pills" style={{ justifyContent: 'center' }}>
           <div className="stat-pill-lg">
             <span className="lbl">Total Contribution</span>
             <span className="val font-mono text-gradient">{formatGP(totalGP)} GP</span>
