@@ -368,6 +368,13 @@
 .detail-section-title { font-size: 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
 
 .roster-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+.roster-grid-large {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+@media (max-width: 1100px) { .roster-grid-large { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px)  { .roster-grid-large { grid-template-columns: 1fr; } }
 .roster-card {
   padding: 1.25rem; display: flex; align-items: center; justify-content: space-between;
   cursor: pointer; transition: 0.2s;
