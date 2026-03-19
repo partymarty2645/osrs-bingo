@@ -1,0 +1,770 @@
+{
+  "team_name": "Team Law",
+  "period": {
+    "start": "2026-03-01T11:00:00+00:00",
+    "end": "2026-03-15T11:00:00+00:00"
+  },
+  "players": [
+    {
+      "name": "shrubninja",
+      "total_loot_value_gp": 329159988,
+      "items_obtained": [
+        {
+          "name": "7 x Dragon platelegs",
+          "value_gp": 1127371,
+          "date": "2026-03-12",
+          "timestamp": "2026-03-12T14:08:14.499000"
+        },
+        {
+          "name": "5 x Dragon platelegs",
+          "value_gp": 805265,
+          "date": "2026-03-12",
+          "timestamp": "2026-03-12T13:43:42.981000"
+        },
+        {
+          "name": "5 x Dragon platelegs",
+          "value_gp": 805265,
+          "date": "2026-03-12",
+          "timestamp": "2026-03-12T13:38:11.178000"
+        },
+        {
+          "name": "Black tourmaline core",
+          "value_gp": 1795589,
+          "date": "2026-03-11",
+          "timestamp": "2026-03-11T00:04:34.304000"
+        },
+        {
+          "name": "7 x Dragon platelegs",
+          "value_gp": 1126853,
+          "date": "2026-03-10",
+          "timestamp": "2026-03-10T18:27:40.800000"
+        },
+        {
+          "name": "250 x Dragon arrowtips",
+          "value_gp": 729000,
+          "date": "2026-03-09",
+          "timestamp": "2026-03-09T21:52:39.066000"
+        },
+        {
+          "name": "7 x Dragon platelegs",
+          "value_gp": 1127392,
+          "date": "2026-03-09",
+          "timestamp": "2026-03-09T00:34:07.257000"
+        },
+        {
+          "name": "Bandos tassets",
+          "value_gp": 18826102,
+          "date": "2026-03-08",
+          "timestamp": "2026-03-08T21:40:03.850000"
+        },
+        {
+          "name": "Oathplate chest",
+          "value_gp": 106600504,
+          "date": "2026-03-08",
+          "timestamp": "2026-03-08T16:29:36.050000"
+        },
+        {
+          "name": "12 x Oathplate shards",
+          "value_gp": 2711352,
+          "date": "2026-03-08",
+          "timestamp": "2026-03-08T03:42:49.486000"
+        },
+        {
+          "name": "12 x Oathplate shards",
+          "value_gp": 2711352,
+          "date": "2026-03-08",
+          "timestamp": "2026-03-08T02:32:15.183000"
+        },
+        {
+          "name": "Crystal weapon seed",
+          "value_gp": 536311,
+          "date": "2026-03-08",
+          "timestamp": "2026-03-08T02:13:40.774000"
+        },
+        {
+          "name": "150 x Onyx bolt tips",
+          "value_gp": 1206900,
+          "date": "2026-03-07",
+          "timestamp": "2026-03-07T16:16:20.237000"
+        },
+        {
+          "name": "Dragon hunter wand",
+          "value_gp": 16945850,
+          "date": "2026-03-06",
+          "timestamp": "2026-03-06T23:42:03.038000"
+        },
+        {
+          "name": "3 x Hueycoatl hide",
+          "value_gp": 1535250,
+          "date": "2026-03-06",
+          "timestamp": "2026-03-06T20:50:36.888000"
+        },
+        {
+          "name": "Magus vestige",
+          "value_gp": 5000000,
+          "date": "2026-03-06",
+          "timestamp": "2026-03-06T03:16:32.245000"
+        },
+        {
+          "name": "250 x Dragon arrowtips",
+          "value_gp": 713000,
+          "date": "2026-03-06",
+          "timestamp": "2026-03-06T02:51:07.933000"
+        },
+        {
+          "name": "Archers ring",
+          "value_gp": 2824762,
+          "date": "2026-03-05",
+          "timestamp": "2026-03-05T17:22:07.976000"
+        },
+        {
+          "name": "Seers ring",
+          "value_gp": 939126,
+          "date": "2026-03-05",
+          "timestamp": "2026-03-05T02:36:23.310000"
+        },
+        {
+          "name": "Ancestral robe top",
+          "value_gp": 141569878,
+          "date": "2026-03-04",
+          "timestamp": "2026-03-04T22:09:33.527000"
+        },
+        {
+          "name": "12 x Oathplate shards",
+          "value_gp": 2687928,
+          "date": "2026-03-04",
+          "timestamp": "2026-03-04T20:28:50.294000"
+        },
+        {
+          "name": "12 x Oathplate shards",
+          "value_gp": 2687928,
+          "date": "2026-03-04",
+          "timestamp": "2026-03-04T18:56:41.766000"
+        },
+        {
+          "name": "5 x Oathplate shards",
+          "value_gp": 1116110,
+          "date": "2026-03-03",
+          "timestamp": "2026-03-03T22:54:45.415000"
+        },
+        {
+          "name": "6 x Oathplate shards",
+          "value_gp": 1339332,
+          "date": "2026-03-03",
+          "timestamp": "2026-03-03T22:46:15.291000"
+        },
+        {
+          "name": "Eternal crystal",
+          "value_gp": 5051272,
+          "date": "2026-03-03",
+          "timestamp": "2026-03-03T00:41:27.172000"
+        },
+        {
+          "name": "150 x Onyx bolt tips",
+          "value_gp": 1218000,
+          "date": "2026-03-02",
+          "timestamp": "2026-03-02T01:14:33.902000"
+        },
+        {
+          "name": "6 x Oathplate shards",
+          "value_gp": 1355574,
+          "date": "2026-03-01",
+          "timestamp": "2026-03-01T23:12:32.298000"
+        },
+        {
+          "name": "6 x Oathplate shards",
+          "value_gp": 1355574,
+          "date": "2026-03-01",
+          "timestamp": "2026-03-01T23:06:13.287000"
+        },
+        {
+          "name": "12 x Oathplate shards",
+          "value_gp": 2711148,
+          "date": "2026-03-01",
+          "timestamp": "2026-03-01T15:08:19.196000"
+        }
+      ]
+    },
+    {
+      "name": "rbhriezer",
+      "total_loot_value_gp": 127395424,
+      "items_obtained": [
+        {
+          "name": "Mokhaiotl cloth",
+          "value_gp": 80318628,
+          "date": "2026-03-12",
+          "timestamp": "2026-03-12T21:35:38.595000"
+        },
+        {
+          "name": "84 x Sun\\-kissed bones",
+          "value_gp": 672000,
+          "date": "2026-03-12",
+          "timestamp": "2026-03-12T21:16:14.742000"
+        },
+        {
+          "name": "73 x Sun\\-kissed bones",
+          "value_gp": 584000,
+          "date": "2026-03-11",
+          "timestamp": "2026-03-11T21:24:53.287000"
+        },
+        {
+          "name": "151 x Sun\\-kissed bones",
+          "value_gp": 1208000,
+          "date": "2026-03-10",
+          "timestamp": "2026-03-10T23:28:23.862000"
+        },
+        {
+          "name": "111 x Sun\\-kissed bones",
+          "value_gp": 888000,
+          "date": "2026-03-10",
+          "timestamp": "2026-03-10T21:37:25.621000"
+        },
+        {
+          "name": "77 x Sun\\-kissed bones",
+          "value_gp": 616000,
+          "date": "2026-03-10",
+          "timestamp": "2026-03-10T00:58:51.739000"
+        },
+        {
+          "name": "108 x Sun\\-kissed bones",
+          "value_gp": 864000,
+          "date": "2026-03-09",
+          "timestamp": "2026-03-09T21:04:57.609000"
+        },
+        {
+          "name": "90 x Sun\\-kissed bones",
+          "value_gp": 720000,
+          "date": "2026-03-08",
+          "timestamp": "2026-03-08T19:23:50.474000"
+        },
+        {
+          "name": "67 x Sun\\-kissed bones",
+          "value_gp": 536000,
+          "date": "2026-03-07",
+          "timestamp": "2026-03-07T23:40:19.164000"
+        },
+        {
+          "name": "Tormented synapse",
+          "value_gp": 39788796,
+          "date": "2026-03-03",
+          "timestamp": "2026-03-03T23:15:39.736000"
+        },
+        {
+          "name": "68 x Sun\\-kissed bones",
+          "value_gp": 544000,
+          "date": "2026-03-01",
+          "timestamp": "2026-03-01T17:30:33.205000"
+        },
+        {
+          "name": "82 x Sun\\-kissed bones",
+          "value_gp": 656000,
+          "date": "2026-03-01",
+          "timestamp": "2026-03-01T16:05:33.457000"
+        }
+      ]
+    },
+    {
+      "name": "lloi",
+      "total_loot_value_gp": 92657424,
+      "items_obtained": []
+    },
+    {
+      "name": "alprosia",
+      "total_loot_value_gp": 82269616,
+      "items_obtained": [
+        {
+          "name": "4 x Dragon platelegs",
+          "value_gp": 644212,
+          "date": "2026-03-12",
+          "timestamp": "2026-03-12T17:23:26.189000"
+        },
+        {
+          "name": "7 x Dragon plateskirt",
+          "value_gp": 1127539,
+          "date": "2026-03-12",
+          "timestamp": "2026-03-12T08:06:42.033000"
+        },
+        {
+          "name": "1,400 x Soul rune",
+          "value_gp": 569800,
+          "date": "2026-03-12",
+          "timestamp": "2026-03-12T07:16:03.200000"
+        },
+        {
+          "name": "105 x Battlestaff",
+          "value_gp": 830340,
+          "date": "2026-03-11",
+          "timestamp": "2026-03-11T15:57:22.204000"
+        },
+        {
+          "name": "7 x Dragon plateskirt",
+          "value_gp": 1127259,
+          "date": "2026-03-11",
+          "timestamp": "2026-03-11T11:29:30.595000"
+        },
+        {
+          "name": "105 x Battlestaff",
+          "value_gp": 830340,
+          "date": "2026-03-11",
+          "timestamp": "2026-03-11T11:23:00.429000"
+        },
+        {
+          "name": "10 x Dragon plateskirt",
+          "value_gp": 1610370,
+          "date": "2026-03-11",
+          "timestamp": "2026-03-11T11:18:15.820000"
+        },
+        {
+          "name": "7 x Dragon plateskirt",
+          "value_gp": 1127259,
+          "date": "2026-03-11",
+          "timestamp": "2026-03-11T11:05:18.161000"
+        },
+        {
+          "name": "7 x Dragon plateskirt",
+          "value_gp": 1127805,
+          "date": "2026-03-10",
+          "timestamp": "2026-03-10T19:41:34.167000"
+        },
+        {
+          "name": "70 x Battlestaff",
+          "value_gp": 553350,
+          "date": "2026-03-10",
+          "timestamp": "2026-03-10T19:32:20.926000"
+        },
+        {
+          "name": "63 x Runite ore",
+          "value_gp": 636363,
+          "date": "2026-03-10",
+          "timestamp": "2026-03-10T15:55:26.863000"
+        },
+        {
+          "name": "Virtus mask",
+          "value_gp": 8419027,
+          "date": "2026-03-10",
+          "timestamp": "2026-03-10T12:38:36.004000"
+        },
+        {
+          "name": "70 x Battlestaff",
+          "value_gp": 553350,
+          "date": "2026-03-10",
+          "timestamp": "2026-03-10T09:44:57.520000"
+        },
+        {
+          "name": "70 x Battlestaff",
+          "value_gp": 553350,
+          "date": "2026-03-09",
+          "timestamp": "2026-03-09T15:37:32.373000"
+        },
+        {
+          "name": "63 x Runite ore",
+          "value_gp": 636363,
+          "date": "2026-03-09",
+          "timestamp": "2026-03-09T15:12:07.329000"
+        },
+        {
+          "name": "7 x Dragon plateskirt",
+          "value_gp": 1127805,
+          "date": "2026-03-09",
+          "timestamp": "2026-03-09T15:02:23.357000"
+        },
+        {
+          "name": "1,400 x Soul rune",
+          "value_gp": 574000,
+          "date": "2026-03-09",
+          "timestamp": "2026-03-09T12:44:21.076000"
+        },
+        {
+          "name": "150 x Onyx bolt tips",
+          "value_gp": 1204950,
+          "date": "2026-03-09",
+          "timestamp": "2026-03-09T09:08:21.255000"
+        },
+        {
+          "name": "150 x Onyx bolt tips",
+          "value_gp": 1204950,
+          "date": "2026-03-09",
+          "timestamp": "2026-03-09T08:37:33.968000"
+        },
+        {
+          "name": "7 x Dragon plateskirt",
+          "value_gp": 1127917,
+          "date": "2026-03-08",
+          "timestamp": "2026-03-08T21:18:06.408000"
+        },
+        {
+          "name": "7 x Dragon plateskirt",
+          "value_gp": 1127917,
+          "date": "2026-03-08",
+          "timestamp": "2026-03-08T19:20:45.550000"
+        },
+        {
+          "name": "7 x Dragon platelegs",
+          "value_gp": 1127392,
+          "date": "2026-03-08",
+          "timestamp": "2026-03-08T16:29:55.346000"
+        },
+        {
+          "name": "5 x Dragon platelegs",
+          "value_gp": 805280,
+          "date": "2026-03-08",
+          "timestamp": "2026-03-08T15:21:18.760000"
+        },
+        {
+          "name": "Crystal weapon seed",
+          "value_gp": 536311,
+          "date": "2026-03-07",
+          "timestamp": "2026-03-07T20:40:37.705000"
+        },
+        {
+          "name": "Monkey tail",
+          "value_gp": 565469,
+          "date": "2026-03-07",
+          "timestamp": "2026-03-07T19:01:48.342000"
+        },
+        {
+          "name": "3 x Hueycoatl hide",
+          "value_gp": 1558170,
+          "date": "2026-03-06",
+          "timestamp": "2026-03-06T22:25:09.622000"
+        },
+        {
+          "name": "3 x Hueycoatl hide",
+          "value_gp": 1535250,
+          "date": "2026-03-06",
+          "timestamp": "2026-03-06T21:03:46.374000"
+        },
+        {
+          "name": "150 x Onyx bolt tips",
+          "value_gp": 1209450,
+          "date": "2026-03-06",
+          "timestamp": "2026-03-06T09:55:49.208000"
+        },
+        {
+          "name": "Venator shard",
+          "value_gp": 13992544,
+          "date": "2026-03-05",
+          "timestamp": "2026-03-05T12:35:28.049000"
+        },
+        {
+          "name": "Osmumten's fang",
+          "value_gp": 24703775,
+          "date": "2026-03-05",
+          "timestamp": "2026-03-05T08:42:41.827000"
+        },
+        {
+          "name": "Abyssal dagger",
+          "value_gp": 1956848,
+          "date": "2026-03-03",
+          "timestamp": "2026-03-03T19:31:22.822000"
+        },
+        {
+          "name": "Malediction shard 1",
+          "value_gp": 774450,
+          "date": "2026-03-03",
+          "timestamp": "2026-03-03T14:53:29.949000"
+        },
+        {
+          "name": "Odium shard 2",
+          "value_gp": 873918,
+          "date": "2026-03-03",
+          "timestamp": "2026-03-03T12:14:43.967000"
+        },
+        {
+          "name": "Dharok's greataxe",
+          "value_gp": 2214619,
+          "date": "2026-03-02",
+          "timestamp": "2026-03-02T15:12:52.167000"
+        },
+        {
+          "name": "Bludgeon spine",
+          "value_gp": 1850937,
+          "date": "2026-03-02",
+          "timestamp": "2026-03-02T12:00:11.090000"
+        },
+        {
+          "name": "Bludgeon axon",
+          "value_gp": 1850937,
+          "date": "2026-03-01",
+          "timestamp": "2026-03-01T20:32:07.538000"
+        }
+      ]
+    },
+    {
+      "name": "emscot",
+      "total_loot_value_gp": 78281901,
+      "items_obtained": [
+        {
+          "name": "4 x Dragon platelegs",
+          "value_gp": 644192,
+          "date": "2026-03-12",
+          "timestamp": "2026-03-12T21:11:54.624000"
+        },
+        {
+          "name": "Tormented synapse",
+          "value_gp": 41784853,
+          "date": "2026-03-12",
+          "timestamp": "2026-03-12T15:34:31.983000"
+        },
+        {
+          "name": "Berserker ring",
+          "value_gp": 3396623,
+          "date": "2026-03-05",
+          "timestamp": "2026-03-05T15:30:44.838000"
+        },
+        {
+          "name": "Blood moon tassets",
+          "value_gp": 12720456,
+          "date": "2026-03-05",
+          "timestamp": "2026-03-05T10:56:32.463000"
+        },
+        {
+          "name": "Eclipse moon chestplate",
+          "value_gp": 1635731,
+          "date": "2026-03-04",
+          "timestamp": "2026-03-04T18:14:16.337000"
+        },
+        {
+          "name": "Blue moon tassets",
+          "value_gp": 5583902,
+          "date": "2026-03-04",
+          "timestamp": "2026-03-04T18:04:32.799000"
+        },
+        {
+          "name": "Eclipse moon helm",
+          "value_gp": 822194,
+          "date": "2026-03-04",
+          "timestamp": "2026-03-04T17:16:05.388000"
+        },
+        {
+          "name": "Blue moon chestplate",
+          "value_gp": 1577907,
+          "date": "2026-03-04",
+          "timestamp": "2026-03-04T16:59:08.168000"
+        },
+        {
+          "name": "Voidwaker blade",
+          "value_gp": 1623563,
+          "date": "2026-03-04",
+          "timestamp": "2026-03-04T13:53:59.329000"
+        },
+        {
+          "name": "Ring of the gods",
+          "value_gp": 888012,
+          "date": "2026-03-03",
+          "timestamp": "2026-03-03T18:16:21.981000"
+        },
+        {
+          "name": "Blood moon chestplate",
+          "value_gp": 5850842,
+          "date": "2026-03-03",
+          "timestamp": "2026-03-03T13:01:08.915000"
+        },
+        {
+          "name": "Blood moon helm",
+          "value_gp": 938766,
+          "date": "2026-03-02",
+          "timestamp": "2026-03-02T19:57:04.871000"
+        },
+        {
+          "name": "Blue moon helm",
+          "value_gp": 814860,
+          "date": "2026-03-01",
+          "timestamp": "2026-03-01T14:15:24.257000"
+        }
+      ]
+    },
+    {
+      "name": "strixter",
+      "total_loot_value_gp": 54285699,
+      "items_obtained": [
+        {
+          "name": "Dragon metal sheet",
+          "value_gp": 874297,
+          "date": "2026-03-14",
+          "timestamp": "2026-03-14T07:02:12.716000"
+        },
+        {
+          "name": "Dragon metal sheet",
+          "value_gp": 874297,
+          "date": "2026-03-13",
+          "timestamp": "2026-03-13T18:35:07.739000"
+        },
+        {
+          "name": "14 x Dragon nails",
+          "value_gp": 695142,
+          "date": "2026-03-13",
+          "timestamp": "2026-03-13T18:29:53.107000"
+        },
+        {
+          "name": "13 x Dragon nails",
+          "value_gp": 640198,
+          "date": "2026-03-12",
+          "timestamp": "2026-03-12T13:36:22.377000"
+        },
+        {
+          "name": "Dragon metal sheet",
+          "value_gp": 773436,
+          "date": "2026-03-10",
+          "timestamp": "2026-03-10T05:37:54.881000"
+        },
+        {
+          "name": "Ultor vestige",
+          "value_gp": 5000000,
+          "date": "2026-03-09",
+          "timestamp": "2026-03-09T17:38:38.895000"
+        },
+        {
+          "name": "Dragon metal sheet",
+          "value_gp": 800845,
+          "date": "2026-03-09",
+          "timestamp": "2026-03-09T14:05:22.637000"
+        },
+        {
+          "name": "Dragon metal sheet",
+          "value_gp": 800845,
+          "date": "2026-03-09",
+          "timestamp": "2026-03-09T11:18:23.791000"
+        },
+        {
+          "name": "14 x Dragon nails",
+          "value_gp": 714434,
+          "date": "2026-03-09",
+          "timestamp": "2026-03-09T08:54:23.381000"
+        },
+        {
+          "name": "12 x Dragon nails",
+          "value_gp": 612372,
+          "date": "2026-03-09",
+          "timestamp": "2026-03-09T07:08:11.918000"
+        },
+        {
+          "name": "Virtus mask",
+          "value_gp": 8846073,
+          "date": "2026-03-07",
+          "timestamp": "2026-03-07T10:26:56.040000"
+        },
+        {
+          "name": "14 x Dragon nails",
+          "value_gp": 679014,
+          "date": "2026-03-07",
+          "timestamp": "2026-03-07T09:30:06.234000"
+        },
+        {
+          "name": "Dragon metal sheet",
+          "value_gp": 767730,
+          "date": "2026-03-07",
+          "timestamp": "2026-03-07T09:21:27.823000"
+        },
+        {
+          "name": "14 x Dragon nails",
+          "value_gp": 653394,
+          "date": "2026-03-06",
+          "timestamp": "2026-03-06T11:13:28.920000"
+        },
+        {
+          "name": "13 x Dragon nails",
+          "value_gp": 606723,
+          "date": "2026-03-06",
+          "timestamp": "2026-03-06T08:34:40.685000"
+        },
+        {
+          "name": "Dragon metal sheet",
+          "value_gp": 735293,
+          "date": "2026-03-05",
+          "timestamp": "2026-03-05T11:20:59.630000"
+        },
+        {
+          "name": "Dragon metal sheet",
+          "value_gp": 735293,
+          "date": "2026-03-05",
+          "timestamp": "2026-03-05T10:25:20.331000"
+        },
+        {
+          "name": "Bottled storm",
+          "value_gp": 11972913,
+          "date": "2026-03-05",
+          "timestamp": "2026-03-05T09:27:35.011000"
+        },
+        {
+          "name": "Venator shard",
+          "value_gp": 13992544,
+          "date": "2026-03-04",
+          "timestamp": "2026-03-04T16:12:47.266000"
+        },
+        {
+          "name": "Charged ice",
+          "value_gp": 500000,
+          "date": "2026-03-03",
+          "timestamp": "2026-03-03T16:50:36.977000"
+        },
+        {
+          "name": "Dragon keel parts",
+          "value_gp": 1540592,
+          "date": "2026-03-02",
+          "timestamp": "2026-03-02T18:41:07.989000"
+        },
+        {
+          "name": "Dragon metal sheet",
+          "value_gp": 706614,
+          "date": "2026-03-02",
+          "timestamp": "2026-03-02T07:01:35.214000"
+        },
+        {
+          "name": "90 x Onyx bolts",
+          "value_gp": 763650,
+          "date": "2026-03-01",
+          "timestamp": "2026-03-01T16:17:22.613000"
+        }
+      ]
+    },
+    {
+      "name": "masexd",
+      "total_loot_value_gp": 12067465,
+      "items_obtained": [
+        {
+          "name": "Voidwaker blade",
+          "value_gp": 1582084,
+          "date": "2026-03-11",
+          "timestamp": "2026-03-11T02:41:44.077000"
+        },
+        {
+          "name": "Eternal crystal",
+          "value_gp": 5051272,
+          "date": "2026-03-04",
+          "timestamp": "2026-03-04T03:03:38.707000"
+        },
+        {
+          "name": "Eclipse moon chestplate",
+          "value_gp": 1668572,
+          "date": "2026-03-03",
+          "timestamp": "2026-03-03T17:11:48.071000"
+        },
+        {
+          "name": "Magic fang",
+          "value_gp": 3765537,
+          "date": "2026-03-03",
+          "timestamp": "2026-03-03T01:06:01.121000"
+        }
+      ]
+    },
+    {
+      "name": "sorty121212",
+      "total_loot_value_gp": 1577907,
+      "items_obtained": [
+        {
+          "name": "Blue moon chestplate",
+          "value_gp": 1577907,
+          "date": "2026-03-04",
+          "timestamp": "2026-03-04T18:08:24.532000"
+        }
+      ]
+    }
+  ],
+  "team_total_loot_value_gp": 777695424,
+  "summary": {
+    "total_players": 8,
+    "players_with_loot": 8,
+    "average_loot_per_player": 97211928
+  }
+}
