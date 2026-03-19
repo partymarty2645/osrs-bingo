@@ -587,7 +587,8 @@ const OverviewTab = ({ globalTotalGP, sortedTeams, setDetailedTeam, recentLoot, 
   );
 };
 
-const LeaderboardTab = ({ sortedTeams, setDetailedTeam, setDetailedPlayer }) => {
+const LeaderboardTab = ({ sortedTeams, setDetailedTeam, setDetailedPlayer, allLoot }) => {
+  const topDrops = [...allLoot].sort((a,b) => b.value_gp - a.value_gp).slice(0, 50);
   return (
     <motion.div variants={pageVariants} initial="initial" animate="animate" exit="exit" className="view-container">
       <div className="view-header">
@@ -632,6 +633,44 @@ const LeaderboardTab = ({ sortedTeams, setDetailedTeam, setDetailedPlayer }) => 
             </motion.div>
           );
         })}
+      </div>
+
+      <h2 className="detail-section-title" style={{marginTop: '4rem'}}>
+        Top 50 Most Expensive Drops <Trophy size={20} style={{color: '#facc15'}}/>
+      </h2>
+      <div className="glass table-container">
+        <table className="modern-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Item Name</th>
+              <th>Player</th>
+              <th>Team</th>
+              <th>Date / Time</th>
+              <th className="table-right">Value (GP)</th>
+            </tr>
+          </thead>
+          <tbody>
+            {topDrops.map((item, i) => (
+              <tr key={`${item.timestamp}-${item.playerName}-${i}`} className={getDropClass(item.value_gp)}>
+                <td style={{fontWeight: 800, color: 'var(--text-dim)'}}>{i + 1}</td>
+                <td style={{fontWeight: 600}}>
+                  <div style={{display: 'flex', alignItems: 'center', gap: '0.75rem'}}>
+                    <OsrsIcon itemName={item.name} size={24} />
+                    <span>{cleanDisplayName(item.name)}</span>
+                  </div>
+                </td>
+                <td style={{fontWeight: 500}}>{item.playerName}</td>
+                <td><span className={`neon-text-${getTeamColorClass(item.teamName)}`} style={{fontSize: '0.8rem', fontWeight: 700, letterSpacing: '0.05em', textTransform: 'uppercase'}}>{item.teamName}</span></td>
+                <td className="table-date">{new Date(item.timestamp).toLocaleString()}</td>
+                <td className="table-right font-mono table-val">{formatGP(item.value_gp)}</td>
+              </tr>
+            ))}
+            {topDrops.length === 0 && (
+              <tr><td colSpan="6" className="table-empty">No drops recorded yet.</td></tr>
+            )}
+          </tbody>
+        </table>
       </div>
     </motion.div>
   );
@@ -870,7 +909,7 @@ function App() {
   const renderTabContent = () => {
     switch (activeTab) {
       case 'overview': return <OverviewTab globalTotalGP={globalTotalGP} sortedTeams={sortedTeams} setDetailedTeam={setDetailedTeam} recentLoot={allLoot} data={data} />;
-      case 'leaderboard': return <LeaderboardTab sortedTeams={sortedTeams} setDetailedTeam={setDetailedTeam} setDetailedPlayer={setDetailedPlayer}/>;
+      case 'leaderboard': return <LeaderboardTab sortedTeams={sortedTeams} setDetailedTeam={setDetailedTeam} setDetailedPlayer={setDetailedPlayer} allLoot={allLoot} />;
       case 'feed': return <FeedTab filteredLoot={filteredLoot} search={search} setSearch={setSearch} filterTeam={filterTeam} setFilterTeam={setFilterTeam} data={data} setDetailedPlayer={setDetailedPlayer}  />;
       default: return null;
     }

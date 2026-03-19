@@ -226,12 +226,20 @@
 /* Leaderboard Page */
 .teams-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+@media (max-width: 1100px) {
+  .teams-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .teams-grid { grid-template-columns: 1fr; }
 }
 
 .team-card {
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex; flex-direction: column;
   cursor: pointer; transition: all 0.3s;
 }
